@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>338</width>
+    <height>326</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kitap Ekle</string>
+  </property>
+  <widget class="QPushButton" name="btnEkle">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>280</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ekle</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>291</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="1">
+     <widget class="QComboBox" name="cBTur"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="txtYayinEvi"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="lblYayinEvi">
+      <property name="text">
+       <string>Yayın Evi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="txtYazari"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblTur">
+      <property name="text">
+       <string>Türü</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="txtKitapAdi"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblKitapAdi">
+      <property name="text">
+       <string>Adı</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblYazari">
+      <property name="text">
+       <string>Yazarı</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>txtKitapAdi</tabstop>
+  <tabstop>txtYazari</tabstop>
+  <tabstop>txtYayinEvi</tabstop>
+  <tabstop>cBTur</tabstop>
+  <tabstop>btnEkle</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

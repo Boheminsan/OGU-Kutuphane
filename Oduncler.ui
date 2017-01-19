@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OduncVer</class>
+ <widget class="QDialog" name="OduncVer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>682</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ödünç Kitap</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>671</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="twOKitap">
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Kitap id</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Kitap Adı</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Öğrenci Numarası</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Öğrenci Adı</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Ödünç Alma Tarihi</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Kalan Süre</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>11</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>12</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>13</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>14</string>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>15</string>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>16</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Ignored</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnYeni">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Yeni</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnUzat">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Süre Uzat</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSil">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Sil</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>twOKitap</sender>
+   <signal>cellDoubleClicked(int,int)</signal>
+   <receiver>twOKitap</receiver>
+   <slot>showRow(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>twOKitap</sender>
+   <signal>cellDoubleClicked(int,int)</signal>
+   <receiver>btnUzat</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>425</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

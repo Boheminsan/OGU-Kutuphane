@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OduncEkle</class>
+ <widget class="QDialog" name="OduncEkle">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>657</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Ödünç Kitap</string>
+  </property>
+  <widget class="QPushButton" name="btnKaydet">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>440</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kaydet</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>621</width>
+     <height>263</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0,0">
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>22</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>4</number>
+    </property>
+    <item row="0" column="2">
+     <widget class="QLineEdit" name="txtKitapid">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="txtOgrAdi">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblKitapid">
+      <property name="text">
+       <string>Kitap id</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="lblOkul">
+      <property name="text">
+       <string>Okul Numarası</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblVTarih">
+      <property name="text">
+       <string>Ödünç Verildiği Tarihi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="lblOgrAdi">
+      <property name="text">
+       <string>Ödünç Alanın Adı</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QCalendarWidget" name="calendarWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="twBilgi">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>621</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <column>
+    <property name="text">
+     <string>Kitap Adı</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Yazarı</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Yayın Evi</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Türü</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="lblBilgiler">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Kitap Bilgileri</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>txtKitapid</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>txtOgrAdi</tabstop>
+  <tabstop>twBilgi</tabstop>
+  <tabstop>btnKaydet</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>txtKitapid</sender>
+   <signal>editingFinished()</signal>
+   <receiver>twBilgi</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnKaydet</sender>
+   <signal>clicked()</signal>
+   <receiver>twBilgi</receiver>
+   <slot>selectAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>373</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
